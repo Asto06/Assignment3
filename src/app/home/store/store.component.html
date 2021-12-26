@@ -1,0 +1,16 @@
+<section>
+  <h2>Buy at the store</h2>
+  <div class="container">
+    <div class="row">
+      <div class="card" *ngFor="let item of store" style="width: 15rem">
+        <img src="{{ item.Image }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h3>{{ item.h3 }}</h3>
+          <p class="card-text">
+            {{ item.Paragraph }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

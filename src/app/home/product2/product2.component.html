@@ -1,0 +1,36 @@
+<section class="products">
+  <h1 class="heading">best our <span> Product</span></h1>
+  <div class="container">
+    <div class="box-container">
+      <div class="box" *ngFor="let item of newProduct">
+        <div class="icon">
+          <div class="card">
+            <span></span>
+          </div>
+          <fa-icon [icon]="faHeart"></fa-icon><span>125</span>
+          <fa-icon [icon]="faEye"></fa-icon><span>125</span>
+        </div>
+        <div class="image">
+          <img src="{{ item.Image }}" alt="" />
+        </div>
+        <div class="content">
+          <h3>{{ item.h3 }}</h3>
+          <div class="stars">
+            <fa-icon [icon]="faStar"></fa-icon>
+            <fa-icon [icon]="faStar"></fa-icon>
+            <fa-icon [icon]="faStar"></fa-icon>
+            <fa-icon [icon]="faStar"></fa-icon>
+            <fa-icon [icon]="faStarHalfAlt"></fa-icon>
+          </div>
+          <div class="price">
+            {{ item.Discount }}<br /><span>{{ item.Price }}</span>
+          </div>
+          <div class="sold">
+            <span>{{ item.Sold }}</span>
+          </div>
+          <a href="#" class="btn">+Add to cart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

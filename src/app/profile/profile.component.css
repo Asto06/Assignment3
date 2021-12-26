@@ -1,0 +1,57 @@
+.about {
+  display: absolute;
+}
+
+.about img {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.review h1 {
+  margin-top: 50px;
+  text-align: center;
+  color: #ffff;
+  text-transform: uppercase;
+  padding-bottom: 60px;
+  font-size: 65px;
+}
+
+.review h1 span {
+  color: #f3ed9e;
+}
+
+.review .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+  padding: 0 5rem;
+}
+
+.review .box-container .box {
+  border: 1px solid #fff;
+  text-align: center;
+  padding: 50px 32px;
+}
+
+.review .box-container .box p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #ccc;
+  padding: 2rem 0;
+}
+
+.review .box-container .box .user {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review .box-container .box h3 {
+  padding: 15px 0;
+  font-size: 30px;
+  color: #fff;
+}

@@ -1,0 +1,132 @@
+<body>
+  <section>
+    <form>
+      <div class="container">
+        <h1>Sign Up</h1>
+        <form
+          *ngIf="!isSuccessful"
+          name="form"
+          (ngSubmit)="f.form.valid && onSubmit()"
+          #f="ngForm"
+          novalidate
+        >
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="inputEmail4">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="inputEmail4"
+                name="email"
+                [(ngModel)]="form.email"
+                required
+                email
+                #email="ngModel"
+                placeholder="email@expample.com"
+              />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="inputPassword4">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="inputPassword"
+                name="password"
+                [(ngModel)]="form.password"
+                required
+                #password="ngModel"
+                placeholder="Enter password"
+              />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="inputPassword4">Confirm Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="inputPassword4"
+                name="confirmPass"
+                [(ngModel)]="form.confirmPass"
+                required
+                #confirmPass="ngModel"
+                placeholder="Enter confirm password"
+              />
+            </div>
+            <div class="form-group col-md-5">
+              <label for="inputPassword4">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstname"
+                name="firstname"
+                [(ngModel)]="form.firstname"
+                required
+                #firstname="ngModel"
+              />
+            </div>
+            <div class="form-group col-md-5">
+              <label for="inputPassword4">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastname"
+                name="lastname"
+                [(ngModel)]="form.lastname"
+                required
+                #lastname="ngModel"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-5">
+              <label for="inputPassword4">Telephone</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="+62"
+                name="telephone"
+                [(ngModel)]="form.telephone"
+                required
+                #telephone="ngModel"
+              />
+            </div>
+            <div class="form-group col-md-5">
+              <label for="inputPassword4">City</label>
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                name="city"
+                [(ngModel)]="form.city"
+                required
+                #city="ngModel"
+              />
+            </div>
+          </div>
+          <!-- 
+          <div class="gender">
+            <h5><strong> Gender</strong></h5>
+            <div>
+              <input
+                type="radio"
+                id="Male"
+                name="Gender"
+                value="Male"
+                checked
+              />
+              <label for="Male">Male</label>
+            </div>
+            <div>
+              <input type="radio" id="Female" name="Gender" value="dewey" />
+              <label for="Female">Female</label>
+            </div>
+          </div> -->
+
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <div>
+          <p *ngIf="messages !== '' ? true : false">{{ messages }}</p>
+        </div>
+      </div>
+    </form>
+  </section>
+</body>

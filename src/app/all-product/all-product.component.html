@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+
+<section class="banner">
+  <div class="container">
+    <img src="../../assets/images/all-product/1/323.jpg" alt="" />
+  </div>
+</section>
+
+<section class="commercial border">
+  <h1>The best coffee drink in the morning</h1>
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col" *ngFor="let item of productitem">
+      <div class="card h-60">
+        <img src="{{ item.ImagePath }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.Title }}</h5>
+          <p class="card-text">
+            {{ item.description }}
+          </p>
+          <input type="hidden" [value]="item._id" #id />
+          <div class="btn" (click)="addCart(id.value)">
+            <a>+Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

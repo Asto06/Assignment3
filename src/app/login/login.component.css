@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../../assets/images/osen-listia-fon-derevo-kofe-colorful-kruzhka-chashka-vinta-1.jpg);
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.form-box {
+  width: 500px;
+  /* background: #8e806a6d; */
+  margin: 12% auto;
+  padding: 50px 0;
+  color: #ffff;
+  box-shadow: 0 0 20px 2px;
+  transition: 0.2s;
+  border: 1px solid #ffff;
+  background: rgba(0, 0, 0, 0.529);
+  overflow: hidden;
+}
+
+.form-box ::placeholder {
+  color: #eee;
+  font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.input-box {
+  margin: 31px auto;
+  width: 80%;
+  border-bottom: 1px solid #ffff;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.input-box input {
+  width: 90%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #ffff;
+}
+
+::placeholder {
+  color: #ccc;
+}
+
+fa-icon {
+  margin-right: 10px;
+}
+
+span {
+  position: absolute;
+}
+
+/* #hide1 {
+  display: none;
+} */
+
+button {
+  margin: 40px auto 20px;
+  width: 80%;
+  display: block;
+  outline: none;
+  padding: 10px 0;
+  border: 1px solid #ffff;
+  cursor: pointer;
+  background: transparent;
+  color: #ffff;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #ffff;
+  color: black;
+}
+
+.register {
+  color: #eee;
+  font-size: 13px;
+  text-align: center;
+}
+
+.register span {
+  color: #f3ed9e;
+  margin-left: 5px;
+}

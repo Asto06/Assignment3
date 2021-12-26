@@ -1,0 +1,55 @@
+<body>
+  <section>
+    <div class="form-box">
+      <h1>Login</h1>
+      <form
+        *ngIf="!isLoggedIn"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+        <div class="input-box">
+          <fa-icon [icon]="faEnvelope"></fa-icon>
+          <input
+            type="email"
+            placeholder="enter your email"
+            name="email"
+            [(ngModel)]="form.email"
+            required
+            email
+            #email="ngModel"
+          />
+        </div>
+        <div class="input-box">
+          <fa-icon [icon]="faKey"></fa-icon>
+          <input
+            [type]="input"
+            placeholder="enter your password"
+            id="onpassword"
+            name="password"
+            [(ngModel)]="form.password"
+            required
+            #password="ngModel"
+          />
+          <span class="eye" (click)="showPass()">
+            <fa-icon [icon]="icon"></fa-icon>
+          </span>
+        </div>
+        <button type="submit" class="login">Sign in</button>
+      </form>
+      <p>{{ message }}</p>
+      <div class="register" *ngIf="!isLoggedIn">
+        Don't have an account ?
+        <span
+          ><a routerLink="/register" routerLinkActive="active">Register</a>
+        </span>
+      </div>
+      <div class="home">
+        <h6>
+          back to <a routerLink="/home" routerLinkActive="active">Home</a>
+        </h6>
+      </div>
+    </div>
+  </section>
+</body>

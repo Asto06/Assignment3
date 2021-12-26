@@ -1,0 +1,45 @@
+.heading {
+  text-align: center;
+  color: #ffff;
+  text-transform: uppercase;
+  padding-bottom: 60px;
+  font-size: 65px;
+}
+
+.heading span {
+  color: #f3ed9e;
+  text-transform: uppercase;
+}
+
+.about .row {
+  display: flex;
+  align-items: center;
+  background: #142f43;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.about .row .image {
+  flex: 1 1 420px;
+}
+
+.about .row .image img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 721px;
+  padding: 32px;
+}
+
+.about .row .content h3 {
+  font-size: 38px;
+  color: #ffff;
+}
+
+.about .row .content p {
+  font-size: 15px;
+  color: #eee;
+  padding: 16px 0;
+  line-height: 1.8;
+}

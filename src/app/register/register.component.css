@@ -1,0 +1,36 @@
+.container {
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 550px;
+  height: 120vh;
+  color: #ffff;
+  transition: 0.2s;
+  background: rgba(0, 0, 0, 0.529);
+  overflow: hidden;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+body {
+  background: url(../../assets/images/dox-restaurant-03.jpg);
+  background-size: cover;
+  background-position: center;
+  display: grid;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+@media (max-width: 997px) {
+  .container {
+    max-width: 100%;
+  }
+}

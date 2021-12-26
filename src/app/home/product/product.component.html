@@ -1,0 +1,14 @@
+<section class="product" id="product">
+  <h1 class="heading">Special <span>Price</span></h1>
+  <div class="box-container">
+    <div class="box" *ngFor="let item of discProduct">
+      <img src="{{ item.ImagePath }}" />
+      <h3>{{ item.Title }}</h3>
+      <div class="price">
+        Rp {{ item.discPrice }}<br /><span>Rp {{ item.Price }}</span>
+      </div>
+      <input type="hidden" [value]="item._id" #id />
+      <a class="btn" (click)="addCart(id.value)">+Add to cart</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,134 @@
+.products h1 {
+  margin-top: 100px;
+  text-align: center;
+  color: #ffff;
+  text-transform: uppercase;
+  padding-bottom: 60px;
+  font-size: 80px;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  background: transparent;
+  border-radius: 20px;
+}
+
+.card span {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+
+  top: -12px;
+  left: -12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card span::before {
+  content: "discount";
+  position: absolute;
+  width: 150%;
+  height: 40px;
+  background: royalblue;
+  transform: rotate(-45deg) translateY(-20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+
+.products h1 span {
+  color: #f3ed9e;
+  text-transform: uppercase;
+}
+
+.products .content h3 {
+  color: #ffff;
+}
+
+.container {
+  padding: 0 10px;
+}
+
+.products .icon span {
+  color: #ffff;
+}
+
+.products .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.5rem;
+}
+
+.products .box-container .box {
+  text-align: center;
+  border: 1px solid #ffff;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.products .box-container .box .icon fa-icon {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  color: #ffff;
+  margin-left: 5px;
+}
+
+.products .box-container .box .icon fa-icon:hover {
+  color: #f0bb62;
+}
+
+.products .box-container .box img {
+  padding: 10px;
+}
+.products .box-container .box image img {
+  height: 100px;
+}
+
+.products .box-container .box .content .stars {
+  color: #f0bb62;
+  font-size: 28px;
+  padding: 25px;
+}
+
+.products .box-container .box .content .stars {
+  padding: 25px;
+}
+
+.products .box-container .box .content .price {
+  color: #ffff;
+  font-size: 28px;
+}
+
+.products .box-container .box .content .price span {
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 25px;
+}
+.products .box-container .box .content .sold span {
+  color: #f3ed9e;
+}
+
+.btn {
+  margin-top: 16px;
+  display: inline-block;
+  padding: 11px 50px;
+  font-size: 18px;
+  color: #ffff;
+  border: 1px solid #ffff;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #519872;
+}

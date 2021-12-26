@@ -1,0 +1,36 @@
+<header>
+  <a href="">
+    <img src="../../assets/images/logoCoffe.png" alt="" />
+  </a>
+
+  <nav class="navbar">
+    <a href="#Home">Home</a>
+
+    <a routerLink="/allproduct" routerLinkActive="active">Product</a>
+
+    <a routerLink="/profile" routerLinkActive="active">Profile</a>
+  </nav>
+
+  <div class="icon">
+    <fa-icon [icon]="faSearch"></fa-icon>
+    <a routerLink="/checkout" routerLinkActive="active">
+      <fa-icon [icon]="faShoppingCart"></fa-icon>
+    </a>
+
+    <a routerLink="/login" routerLinkActive="active">
+      <fa-icon [icon]="faUser"></fa-icon>
+    </a>
+    <a routerLinkActive="active" (click)="logout()" *ngIf="isLoggedIn">
+      <fa-icon [icon]="faSignOutAlt"></fa-icon>
+    </a>
+    <fa-icon [icon]="faBars" id="menu-btn" (click)="btnMenu()"></fa-icon>
+  </div>
+
+  <nav class="navbar" id="hiddenMenu" *ngIf="isDisplayHidden">
+    <a href="#Home">Home</a>
+
+    <a href="#Product">Product</a>
+
+    <a href="#contact">Contact</a>
+  </nav>
+</header>

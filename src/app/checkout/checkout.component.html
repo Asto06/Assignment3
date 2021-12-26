@@ -1,0 +1,102 @@
+<app-navbar></app-navbar>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th class="text-center">Price</th>
+              <th class="text-center">Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of cartDB">
+              <td class="col-sm-8 col-md-6">
+                <div class="media">
+                  <a class="thumbnail pull-left" href="#">
+                    <img
+                      class="media-object"
+                      src="{{ item.product?.ImagePath }}"
+                      style="width: 72px; height: 72px"
+                    />
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading">
+                      <a href="#">{{ item.product?.Title }}</a>
+                    </h4>
+                    <h5 class="media-heading">by <a href="#">Brand name</a></h5>
+                    <span>Status: </span
+                    ><span class="text-success"><strong>In Stock</strong></span>
+                  </div>
+                </div>
+              </td>
+              <td class="col-sm-1 col-md-1" style="text-align: center">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  [value]="value"
+                  min="1"
+                  #amount
+                />
+                <button (click)="total(amount.value, item.product?.Price)">
+                  OK
+                </button>
+              </td>
+              <td class="col-sm-1 col-md-1 text-center">
+                <strong>{{ item.product?.Price }}</strong>
+              </td>
+              <td class="col-sm-1 col-md-1 text-center">
+                <strong>{{
+                  value > 1 ? totalPrice : item.product?.Price
+                }}</strong>
+              </td>
+              <td class="col-sm-1 col-md-1">
+                <input type="hidden" [value]="item?._id" #id />
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  (click)="deleteCart(id.value)"
+                >
+                  <span class="glyphicon glyphicon-remove"></span> Remove
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td><h3>Total</h3></td>
+              <td class="text-right">
+                <h3>
+                  <strong>{{ totalPrice }}</strong>
+                </h3>
+              </td>
+            </tr>
+            <tr>
+              <td> </td>
+              <td> </td>
+              <td> </td>
+              <td>
+                <button type="button" class="btn btn-default">
+                  <span class="glyphicon glyphicon-shopping-cart"></span>
+                  Continue Shopping
+                </button>
+              </td>
+              <td>
+                <button type="button" class="btn btn-success">
+                  Checkout <span class="glyphicon glyphicon-play"></span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
