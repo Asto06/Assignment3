@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 import { Cart } from '../_models/Carts';
 import { ProductService } from './product.service';
 import { TokenStorageService } from './token-storage.service';
 
-const API_URL = 'http://localhost:6060/api/';
+const API_URL = `${environment.API_URL}api/`;
 
 @Injectable({
   providedIn: 'root',
